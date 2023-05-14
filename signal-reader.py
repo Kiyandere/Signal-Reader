@@ -7,13 +7,13 @@ import shutil
 folder_path = os.getcwd()
 
 # Specify the folder name to store old CSV files
-old_folder_name = 'old_csv'
+old_folder_name = 'old_dataset'
 
 # Create the folder to store old CSV files if it doesn't exist
 old_folder_path = os.path.join(folder_path, old_folder_name)
 os.makedirs(old_folder_path, exist_ok=True)
 
-# Specify the column number to process (starting from 0)
+# All data from exported csv is in first column (starts at 0)
 column_number = 0
 
 # Initialize the maximum number and the corresponding row
@@ -38,15 +38,15 @@ while True:
 
             # Iterate through the rows and find the maximum number in the specified column
             for row in csv_reader:
-                number_str = row[column_number].split(';')[1]  # Extract the number to the right of the semicolon
+                number_str = row[column_number].split(';')[1]  # Extract the decibel to the right of the semicolon
                 number = float(number_str)
                 if number > max_number:
                     max_number = number
                     max_row = row
 
-        # Display the number to the left of the semicolon of the row with the highest number to the right of semicolon
+        # Display the highest decibel frequency
         if max_row is not None:
-            print(f"The number to the left of the semicolon in the row with the highest number to the right of semicolon is: {max_row[column_number].split(';')[0]}")
+            print(f"The frequency with the highest decibel is: {max_row[column_number].split(';')[0]}")
 
         # Move the most recent CSV file to the old folder
         old_file_path = os.path.join(old_folder_path, most_recent_file)
