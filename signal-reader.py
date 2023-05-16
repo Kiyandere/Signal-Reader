@@ -55,4 +55,4 @@ while True:
         print(f"Moved {most_recent_file} to {old_folder_name} folder.")
 
     # Wait for a specified duration before checking again
-    time.sleep(60)  # Adjust the duration as per your requirement
+    time.sleep(10)  # Adjust the duration as per your requirement
