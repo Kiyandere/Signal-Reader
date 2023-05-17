@@ -65,7 +65,7 @@ while True:
             decibel = closest_row[column_number].split(';')[1]
             #test code, if broke, delete this
             display_freq_in_MHz = float(frequency) / 1000000
-            print(f"The closest frequency in the current CSV file is: {display_freq_in_MHz} MHz with {decibel} dB")
+            print(f"The closest frequency in the current CSV file '{most_recent_file}' is: {display_freq_in_MHz} MHz with {decibel} dB")
 
     high_dB = float(decibel)
     highest_file = None
@@ -88,7 +88,7 @@ while True:
 
     if highest_file is not None:
         display_freq_in_MHz_2 = float(frequency) / 1000000
-        print(f"The highest value in varB among old CSV files is: {display_freq_in_MHz_2} MHz at {high_dB} dB (found in {highest_file})")
+        print(f"The highest decibel value among the scanned CSV files is: {display_freq_in_MHz_2} MHz at {high_dB} dB (found in {highest_file})")
 
     # Wait for a specified duration before checking again
     time.sleep(5)  # Adjust the duration as per your requirement
