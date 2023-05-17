@@ -1,7 +1,7 @@
-class MaxGain:
+class WideBeam:
     def __init__(self):
         pass
 
     def execute(self):
-        print("Option MaxGain selected.")
+        print("Option WideBeam selected.")
     
