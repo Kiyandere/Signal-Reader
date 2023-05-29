@@ -24,9 +24,9 @@ Install [Python 3.9](https://www.python.org/downloads/release/python-390/)
 ## Running the application
 Go into the Signal-Reader folder and run it with terminal
 ```
-python ./signal-reader.py
+python ./maxgain.py
 ```
-Or you can just double click signal-reader.py lmao
+Or you can just double click maxgain.py
 
 ## Different Modes
 ### Front/Rear
